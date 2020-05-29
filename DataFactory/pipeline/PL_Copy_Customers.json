@@ -22,7 +22,28 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "FirstName"
+								},
+								"sink": {
+									"name": "FirstName"
+								}
+							},
+							{
+								"source": {
+									"name": "LastName"
+								},
+								"sink": {
+									"name": "LastName"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
